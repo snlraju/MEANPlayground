@@ -28,7 +28,7 @@ app.use('/', routes);
 app.use('/users', users);
 
 //Connect to Mongoose
-mongoose.connect('mongodb://localhost/imdb', function(err) {
+mongoose.connect('mongodb://localhost/imdb', {useNewUrlParser:true}, function(err) {
     if(err) {
         console.log('Connection error', err);
     } else {
@@ -53,11 +53,14 @@ m1.save(function(err){
 });
 
 
+//Mongoose Read
+
+
 //Mongoose Update
-var updatemovie = new movie({name: 'Enthiran'});
-var upsertData = updatemovie.toObject();
-delete upsertData._id;
-movie.update({name: 'Vettayadu Vilayadu'}, upsertData, {upsert: true}, function(err){});
+
+//Mongoose Delete
+
+
 
 //--------------------------------------------------------------
 
@@ -92,5 +95,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.listen(8080, ()=>{
+    console.log('Application is running on port 8080');
+});
 
 module.exports = app;
