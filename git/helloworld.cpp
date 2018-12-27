@@ -3,7 +3,7 @@
 
 int main()
 {
-	//Removed this
+	//Removed this now
 	cout>>"HelloWorld"
 	getch();
 	return 0;
