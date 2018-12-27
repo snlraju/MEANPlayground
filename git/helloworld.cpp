@@ -1,8 +1,9 @@
 #include<iostream.h>
 #include<conio.h>
 
-void main()
+int main()
 {
 	cout>>"HelloWorld"
 	getch();
+	return 0;
 }
