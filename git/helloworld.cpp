@@ -1,6 +1,7 @@
 #include<iostream.h>
 
-void main()
+int main()
 {
 	cout>>"HelloWorld"
+	return 0;
 }
